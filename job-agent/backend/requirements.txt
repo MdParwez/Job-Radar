@@ -1,0 +1,28 @@
+# Exact versions verified together on 2026-07-04: clean install, app import,
+# route registration, and end-to-end resume-upload / job-search endpoint
+# tests all pass (Groq/Tavily/Langfuse network calls mocked in tests since
+# those need live API keys).
+fastapi==0.139.0
+uvicorn[standard]==0.50.0
+python-multipart==0.0.32
+pydantic==2.13.4
+pydantic-settings==2.14.2
+langchain==1.3.11
+langchain-core==1.4.8
+langchain-groq==1.1.3
+langgraph==1.2.7
+groq==0.37.1
+tavily-python==0.7.26
+pdfplumber==0.11.10
+python-docx==1.2.0
+openpyxl==3.1.5
+httpx==0.28.1
+feedparser==6.0.12
+beautifulsoup4==4.15.0
+python-dotenv==1.2.2
+tenacity==9.1.4
+
+# Observability: tool-call/latency/token/cost tracing for every LLM call and
+# every LangGraph node. Free self-hosted or free tier on cloud.langfuse.com.
+# Requires full `langchain` (not just langchain-core) — see langgraph_agent.py.
+langfuse==4.13.0
